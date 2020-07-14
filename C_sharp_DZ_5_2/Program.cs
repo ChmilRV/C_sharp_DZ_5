@@ -20,7 +20,12 @@ namespace C_sharp_DZ_5_2
         }
         public Fraction(int a, int b)
         {
-            if (b == 0) { throw new DivideByZeroException("В знаменателе не может быть нуля"); }
+            if (b == 0) { throw new DivideByZeroException("Знаменатель не может быть ноль"); }
+            //if (b == 0)
+            //{
+            //    b = 1;
+            //    Console.WriteLine("Знаменатель не может быть ноль");
+            //}
             this.a = a;
             this.b = b;
         }
@@ -33,11 +38,78 @@ namespace C_sharp_DZ_5_2
         }
         //public static Fraction operator +(Fraction z1, double d)
         //{
+        //    Fraction temp = ToFraction(d);
+        //    Initialize(temp.Numerator, temp.Denominator);
         //    Fraction z = new Fraction();
         //    z.a = z1.a + z1.b * d;
         //    z.b = z1.b;
         //    return z;
         //}
+
+        public static Fraction operator -(Fraction z1, Fraction z2)
+        {
+            Fraction z = new Fraction();
+            z.a = z1.a * z2.b - z2.a * z1.b;
+            z.b = z1.b * z2.b;
+            return z;
+        }
+        public static Fraction operator *(Fraction z1, Fraction z2)
+        {
+            Fraction z = new Fraction();
+            z.a = z1.a * z2.a;
+            z.b = z1.b * z2.b;
+            return z;
+        }
+        public static Fraction operator *(Fraction z1, int n)
+        {
+            Fraction z = new Fraction();
+            z.a = z1.a * n;
+            z.b = z1.b;
+            return z;
+        }
+        public static Fraction operator *(int n, Fraction z1)
+        {
+            Fraction z = new Fraction();
+            z.a = z1.a * n;
+            z.b = z1.b;
+            return z;
+        }
+        public static Fraction operator /(Fraction z1, Fraction z2)
+        {
+            Fraction z = new Fraction();
+            z.a = z1.a * z2.b;
+            z.b = z1.b * z2.a;
+            return z;
+        }
+
+        public static bool operator ==(Fraction z1, Fraction z2)
+        {
+            return z1.Equals(z2);
+        }
+        public static bool operator !=(Fraction z1, Fraction z2)
+        {
+            return !(z1 == z2);
+        }
+
+        public static bool operator >(Fraction z1, Fraction z2)
+        {
+            if (Convert.ToDouble(z1.a / z1.b) - Convert.ToDouble(z2.a / z2.b)>0) return true;
+        }
+
+        public static bool operator <(Fraction z1, Fraction z2)
+        {
+            if (Convert.ToDouble(z1.a / z1.b) - Convert.ToDouble(z2.a / z2.b) > 0) return true;
+        }
+
+        public static bool operator true(Fraction z1)
+        {
+            return z1.a < z1.b ? true : false;
+        }
+        public static bool operator false(Fraction z1)
+        {
+            return z1.a > z1.b ? true : false;
+        }
+
 
 
         public override string ToString()
@@ -50,18 +122,21 @@ namespace C_sharp_DZ_5_2
     {
         static void Main(string[] args)
         {
-            //Fraction f = new Fraction(3, 4);
-            //int a = 10;
-            //Fraction f1 = f * a;
-            //Fraction f2 = a * f;
-            //double d = 1.5;
+            Fraction f = new Fraction(3, 4);
+            Console.WriteLine($"f={f}");
+            int a = 10;
+            Fraction f1 = f * a;
+            Console.WriteLine($"f1={f1}");
+            Fraction f2 = a * f;
+            Console.WriteLine($"f2={f2}");
+            double d = 1.5;
             //Fraction f3 = f + d;
 
 
-            Fraction f = new Fraction(3, 4);
-            Console.WriteLine($"f={f}");
-            Fraction r = new Fraction();
-            Console.WriteLine($"r={r}");
+            //Fraction f = new Fraction(3, 0);
+            //Console.WriteLine($"f={f}");
+            //Fraction r = new Fraction();
+            //Console.WriteLine($"r={r}");
 
 
 
