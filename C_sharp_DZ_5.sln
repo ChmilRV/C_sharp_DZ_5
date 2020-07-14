@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C_sharp_DZ_5_1", "C_sharp_DZ_5_1\C_sharp_DZ_5_1.csproj", "{FC6A8BB8-F9F6-4C68-A824-AED5643E683E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C_sharp_DZ_5_2", "C_sharp_DZ_5_2\C_sharp_DZ_5_2.csproj", "{4181C00A-D79D-471D-B8A4-4297A8FF248B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FC6A8BB8-F9F6-4C68-A824-AED5643E683E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC6A8BB8-F9F6-4C68-A824-AED5643E683E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC6A8BB8-F9F6-4C68-A824-AED5643E683E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC6A8BB8-F9F6-4C68-A824-AED5643E683E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4181C00A-D79D-471D-B8A4-4297A8FF248B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4181C00A-D79D-471D-B8A4-4297A8FF248B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4181C00A-D79D-471D-B8A4-4297A8FF248B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4181C00A-D79D-471D-B8A4-4297A8FF248B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {28C3ACB5-9F1B-477E-A5CC-C88518D0C064}
+	EndGlobalSection
+EndGlobal
