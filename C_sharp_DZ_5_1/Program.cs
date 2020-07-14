@@ -22,7 +22,7 @@ namespace C_sharp_DZ_5_1
             z.x = z1.x + z2.x;
             z.y = z1.y + z2.y;
             return z;
-            //return new Complex(z1.x + z2.x, z1.y + z1.y);
+            //return new Complex(z1.x + z2.x, z1.y + z2.y);
         }
         public static Complex operator -(Complex z1, Complex z2)
         {
@@ -65,7 +65,7 @@ namespace C_sharp_DZ_5_1
         }
         public override string ToString()
         {
-            return $"{x:F2} + {y:F2}*i";
+            return $"{x:F3} + {y:F3}*i";
         }
     }
     class Program
@@ -76,6 +76,12 @@ namespace C_sharp_DZ_5_1
             Complex z1;
             z1 = z - (z * z * z - 1) / (3 * z * z);
             Console.WriteLine("z1 = {0}", z1);
+            Complex zz = new Complex(1, 0);
+            Complex zz1 = zz - (zz * zz * zz - 1) / (3 * zz * zz);
+            Console.WriteLine("zz1 = {0}", zz1);
+            Complex f = new Complex(2, 2);
+            Complex f1 = f * f;
+            Console.WriteLine("f1 = {0}", f1);
             Console.ReadKey();
         }
     }
