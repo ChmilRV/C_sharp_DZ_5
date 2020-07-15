@@ -10,6 +10,8 @@ namespace C_sharp_DZ_5_1
     class Complex
     {
         double x, y;
+        public int X { get; set; }
+        public int Y { get; set; }
         public Complex() { }
         public Complex(double x, double y)
         {
@@ -18,49 +20,57 @@ namespace C_sharp_DZ_5_1
         }
         public static Complex operator +(Complex z1, Complex z2)
         {
-            Complex z = new Complex();
-            z.x = z1.x + z2.x;
-            z.y = z1.y + z2.y;
+            Complex z = new Complex
+            {
+                x = z1.x + z2.x,
+                y = z1.y + z2.y
+            };
             return z;
-            //return new Complex(z1.x + z2.x, z1.y + z2.y);
         }
         public static Complex operator -(Complex z1, Complex z2)
         {
-            Complex z = new Complex();
-            z.x = z1.x - z2.x;
-            z.y = z1.y - z2.y;
+            Complex z = new Complex
+            {
+                x = z1.x - z2.x,
+                y = z1.y - z2.y
+            };
             return z;
-            //return new Complex(z1.x - z2.x, z1.y - z1.y);
+
         }
         public static Complex operator -(Complex z1, double n)
         {
-            Complex z = new Complex();
-            z.x = z1.x - n;
-            z.y = z1.y;
+            Complex z = new Complex
+            {
+                x = z1.x - n,
+                y = z1.y
+            };
             return z;
-            //return new Complex(z1.x - n, z1.y);
         }
         public static Complex operator *(Complex z1, Complex z2)
         {
-            Complex z = new Complex();
-            z.x = z1.x * z2.x - z1.y * z2.y;
-            z.y = z1.y * z2.x + z1.x * z2.y;
+            Complex z = new Complex
+            {
+                x = z1.x * z2.x - z1.y * z2.y,
+                y = z1.y * z2.x + z1.x * z2.y
+            };
             return z;
-            //return new Complex(z1.x * z2.x - z1.y * z2.y, z1.y * z2.x + z1.x * z2.y);
         }
         public static Complex operator *(double n, Complex z2)
         {
-            Complex z = new Complex();
-            z.x = n * z2.x;
-            z.y = n * z2.y;
+            Complex z = new Complex
+            {
+                x = n * z2.x,
+                y = n * z2.y
+            };
             return z;
-            //return new Complex(n * z2.x, n * z2.y);
         }
         public static Complex operator /(Complex z1, Complex z2)
         {
-            Complex z = new Complex();
-            z.x = (z1.x * z2.x + z1.y * z2.y) / (Math.Pow(z2.x, 2) + Math.Pow(z2.y, 2));
-            z.y = (z1.y * z2.y - z1.x * z2.y) / (Math.Pow(z2.x, 2) + Math.Pow(z2.y, 2));
+            Complex z = new Complex
+            {
+                x = (z1.x * z2.x + z1.y * z2.y) / (Math.Pow(z2.x, 2) + Math.Pow(z2.y, 2)),
+                y = (z1.y * z2.y - z1.x * z2.y) / (Math.Pow(z2.x, 2) + Math.Pow(z2.y, 2))
+            };
             return z;
         }
         public override string ToString()
